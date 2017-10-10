@@ -4,7 +4,7 @@ const nodemailer = require('nodemailer');
 const passport = require('passport');
 const User = require('../models/User');
 
-const ALLOWED_EMAILS = ['me@aneeshashutosh.com', 'aneeshashutosh@gmail.com', 'meh@meh.com'];
+const ALLOWED_EMAILS = process.env.ALLOWED_EMAILS.split(' ');
 
 /**
  * GET /login
