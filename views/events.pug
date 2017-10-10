@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1 Ascend Attendance Tracker
+  p.lead Logs attendance for our members.
+  hr
+  .row
+    for event in events
+      .col-sm-6
+        h2 #{event.name}
+        h3 Attendees
+        for attendee in event.attendees
+          p #{attendee}

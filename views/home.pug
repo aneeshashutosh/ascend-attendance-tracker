@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  h1 Ascend Attendance Tracker
+  p.lead Logs attendance for our members.
+  hr
+  .row
+    .col-sm-6
+      h2 Events
+      p Check out statistics on our events, including a list of attendees and other analytics.
+      p
+        a.btn.btn-default(href='/events', role='button') View details »
+    .col-sm-6
+      h2 People
+      p Check out which events a given user has been to (and which they haven't). Analytics abound! More coming soon.
+      p
+        a.btn.btn-default(href='/people', role='button') View details »
+    .col-sm-6
+      h2 Upload
+      p Event just finished? Export participation data from NYU Engage, and copy names and emails. Paste them here and they'll be automatically added to our database!
+      p
+        a.btn.btn-default(href='/upload', role='button') View details »

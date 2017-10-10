@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  .page-header
+    h3 Event Information
+
+  form.form-horizontal(action='/upload/submit', method='POST')
+    p Please enter names and emails, separated by tabs. Each new attendee should be on a separate line.
+    input(type='hidden', name='_csrf', value=_csrf)
+    .form-group
+      label.col-sm-3.control-label(for='event') Event Title
+      .col-sm-7
+        input.form-control(type='event', name='event', id='event')
+
+    .form-group
+      label.col-sm-3.control-label(for='data') Attendee Data
+      .col-sm-7
+        textarea.form-control(type='data', rows='14', name='data', id='data')
+    .form-group
+      .col-sm-offset-3.col-sm-4
+        button.btn.btn-primary(type='submit')
+          i.fa.fa-floppy-o
+          | Submit
